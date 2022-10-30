@@ -8,7 +8,7 @@ export class Habitacion {
     private categoria: TipoHabitacion;
     private listaServicios: Array<Servicio>;
     private listaHuespedes: Array<Persona>;
-    private responsable: Persona = null;
+    private responsable: Persona = new Persona();
     private saldo: number = 0;
 
     constructor(id: number, categoria: TipoHabitacion, capacidad: number) {
