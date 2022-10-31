@@ -8,15 +8,16 @@ export class Habitacion {
     private categoria: TipoHabitacion;
     private listaServicios: Array<Servicio>;
     private listaHuespedes: Array<Persona>;
-    private responsable: Persona = new Persona();
+    private responsable: Persona ;
     private saldo: number = 0;
 
-    constructor(id: number, categoria: TipoHabitacion, capacidad: number) {
+    constructor(id: number, categoria: TipoHabitacion, capacidad: number, responsable : Persona) {
         this.listaHuespedes = new Array<Persona>();
         this.listaServicios = new Array<Servicio>();
         this.id = id;
         this.categoria = categoria;
         this.capacidad = capacidad;
+        this.responsable = responsable;
     }
 
     public isDisponible(): boolean {
@@ -127,7 +128,5 @@ export class Habitacion {
         a = a + "Habitacion{" + "id=" + this.id + ", categoria=" + this.categoria.imprimir() + '}';
 
         return a;
-
-
     }
 }

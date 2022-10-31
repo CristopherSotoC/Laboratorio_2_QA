@@ -1,6 +1,5 @@
 
-export interface TipoHabitacion {
-    
+export interface TipoAsiento {
     getNombre():string;
 
     getDescripcion():string;
@@ -10,5 +9,4 @@ export interface TipoHabitacion {
     setDescripcion(d:string):void;
 
     imprimir():string;
-
 }
