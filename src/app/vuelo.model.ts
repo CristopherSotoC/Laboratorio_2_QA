@@ -119,7 +119,6 @@ export class Vuelo implements AsientosSaldos {
     }
     return asi;
   }
-
   public getAsientoMayorDeuda(): number {
     var asi: number = 0;
     var mayor: number = this.lista[0].getSaldo();
@@ -132,11 +131,20 @@ export class Vuelo implements AsientosSaldos {
     }
     return asi;
   }
-
   public getTotalConsumoVuelo(): number {
     var total: number = 0;
     for (var i = 0; i < this.lista.length; i++) {
       total += this.lista[i].getConsumo();
+    }
+    return total;
+  }
+
+  public getTotalConsumoCliente(cedula:number): number {
+    var total: number = 0;
+    for (var i = 0; i < this.lista.length; i++) {
+      if (this.lista[i].getCliente().getCedula() == cedula){
+        total += this.lista[i].getConsumo();
+      }
     }
     return total;
   }

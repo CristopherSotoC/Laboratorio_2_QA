@@ -8,5 +8,6 @@ export interface AsientosSaldos {
       getAsientoMayorDeuda(lista:Array<Asiento>): number;
  
       getTotalConsumoVuelo(lista:Array<Asiento>): number;
-   
+      
+      getTotalConsumoCliente(cedula:number): number;
 }
