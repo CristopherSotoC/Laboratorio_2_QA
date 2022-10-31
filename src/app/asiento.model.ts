@@ -85,23 +85,5 @@ export class Asiento {
     this.saldo = saldo;
   }
 
-  public toString(): string {
-    var a: string = '---------------- Servicios ----------------';
-    for (var i = 0; i < this.listaServicios.length; i++) {
-      a = a + this.listaServicios[i].imprimir() + '/n';
-    }
-    a = a + '---------------- Clientes ----------------';
-    
-    a = a + this.cliente.toString() + '/n';
-
-    a =
-      a +
-      'Asiento{' +
-      'id=' +
-      this.id +
-      ', categoria=' +
-      this.categoria.imprimir() +
-      '}';
-    return a;
-  }
+ 
 }
