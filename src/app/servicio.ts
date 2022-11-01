@@ -1,18 +1,14 @@
-import { TipoServicio } from "./tipo-servicio.model";
-
 export interface Servicio {
+    new () : Servicio ;
+    /*************************** */
+    setTipo(tipoServicio :  string): void;
+    getTipo(tipoServicio : string): string;
 
-    getIdentificador():number;
-    setIdentificador(identificador:number):void;
+    setPrecioServicio(tipoServicio :  string, precio : number): boolean;
+    
+    setIdServicio(id:number):number;
 
-    getCosto():number;
-    setCosto(costo:number):void;
+    getIdServicio():number;
 
-    isPagado():boolean;
-    setPagado(pagado:boolean):void;
-
-    getTipo():TipoServicio;
-    setTipo(tipo:TipoServicio):void;
-
-    imprimir():string;
+    eliminarServicio():number
 }
