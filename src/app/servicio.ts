@@ -1,6 +1,6 @@
 export interface Servicio {
     new () : Servicio ;
-    /*************************** */
+    
     setTipo(tipoServicio :  string): void;
     getTipo(tipoServicio : string): string;
 

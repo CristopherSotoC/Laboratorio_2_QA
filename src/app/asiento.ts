@@ -1,4 +1,3 @@
-import { Evaluacion } from './evaluacion';
 import { Servicio } from './servicio';
 
 export class Asiento {
